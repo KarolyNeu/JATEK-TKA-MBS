@@ -1,9 +1,6 @@
 -Slime
 -Trapchest
--Imp
--Orc
 -Blood Warrior
 -Vampire
 -Undead Dragon
--Cerberus
 -Devil(Vexar The Fear Devil)
