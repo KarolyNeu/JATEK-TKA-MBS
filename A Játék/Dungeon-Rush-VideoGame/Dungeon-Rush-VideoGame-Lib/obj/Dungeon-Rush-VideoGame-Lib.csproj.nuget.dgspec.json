@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\Teszt\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame-Lib\\Dungeon-Rush-VideoGame-Lib.csproj": {}
+    "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\A Játék\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame-Lib\\Dungeon-Rush-VideoGame-Lib.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\Teszt\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame-Lib\\Dungeon-Rush-VideoGame-Lib.csproj": {
+    "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\A Játék\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame-Lib\\Dungeon-Rush-VideoGame-Lib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\Teszt\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame-Lib\\Dungeon-Rush-VideoGame-Lib.csproj",
+        "projectUniqueName": "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\A Játék\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame-Lib\\Dungeon-Rush-VideoGame-Lib.csproj",
         "projectName": "Dungeon-Rush-VideoGame-Lib",
-        "projectPath": "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\Teszt\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame-Lib\\Dungeon-Rush-VideoGame-Lib.csproj",
+        "projectPath": "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\A Játék\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame-Lib\\Dungeon-Rush-VideoGame-Lib.csproj",
         "packagesPath": "C:\\Users\\Karesz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\Teszt\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame-Lib\\obj\\",
+        "outputPath": "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\A Játék\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame-Lib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Karesz\\AppData\\Roaming\\NuGet\\NuGet.Config",

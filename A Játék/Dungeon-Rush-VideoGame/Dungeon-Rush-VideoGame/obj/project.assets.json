@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\Teszt\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame.csproj",
+      "projectUniqueName": "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\A Játék\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame.csproj",
       "projectName": "Dungeon-Rush-VideoGame",
-      "projectPath": "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\Teszt\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame.csproj",
+      "projectPath": "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\A Játék\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame.csproj",
       "packagesPath": "C:\\Users\\Karesz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\Teszt\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame\\obj\\",
+      "outputPath": "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\A Játék\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Karesz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\Teszt\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame-Lib\\Dungeon-Rush-VideoGame-Lib.csproj": {
-              "projectPath": "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\Teszt\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame-Lib\\Dungeon-Rush-VideoGame-Lib.csproj"
+            "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\A Játék\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame-Lib\\Dungeon-Rush-VideoGame-Lib.csproj": {
+              "projectPath": "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\A Játék\\Dungeon-Rush-VideoGame\\Dungeon-Rush-VideoGame-Lib\\Dungeon-Rush-VideoGame-Lib.csproj"
             }
           }
         }
