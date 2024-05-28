@@ -1,5 +1,0 @@
-C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\A Játék\Dungeon-Rush-VideoGame\Dungeon-Rush-VideoGame\obj\Debug\net7.0\Dungeon-Rush-VideoGame.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\A Játék\Dungeon-Rush-VideoGame\Dungeon-Rush-VideoGame\obj\Debug\net7.0\Dungeon-Rush-VideoGame.AssemblyInfoInputs.cache
-C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\A Játék\Dungeon-Rush-VideoGame\Dungeon-Rush-VideoGame\obj\Debug\net7.0\Dungeon-Rush-VideoGame.AssemblyInfo.cs
-C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\A Játék\Dungeon-Rush-VideoGame\Dungeon-Rush-VideoGame\obj\Debug\net7.0\Dungeon-Rush-VideoGame.csproj.CoreCompileInputs.cache
-C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\A Játék\Dungeon-Rush-VideoGame\Dungeon-Rush-VideoGame\obj\Debug\net7.0\Dungeon-Rush-VideoGame.csproj.AssemblyReference.cache

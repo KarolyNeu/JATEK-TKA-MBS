@@ -1,0 +1,14 @@
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Teszt\Teszt-Game\Teszt-Game\bin\Debug\net7.0\TesztGame.exe
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Teszt\Teszt-Game\Teszt-Game\bin\Debug\net7.0\TesztGame.deps.json
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Teszt\Teszt-Game\Teszt-Game\bin\Debug\net7.0\TesztGame.runtimeconfig.json
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Teszt\Teszt-Game\Teszt-Game\bin\Debug\net7.0\TesztGame.dll
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Teszt\Teszt-Game\Teszt-Game\bin\Debug\net7.0\TesztGame.pdb
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Teszt\Teszt-Game\Teszt-Game\obj\Debug\net7.0\TesztGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Teszt\Teszt-Game\Teszt-Game\obj\Debug\net7.0\TesztGame.AssemblyInfoInputs.cache
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Teszt\Teszt-Game\Teszt-Game\obj\Debug\net7.0\TesztGame.AssemblyInfo.cs
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Teszt\Teszt-Game\Teszt-Game\obj\Debug\net7.0\TesztGame.csproj.CoreCompileInputs.cache
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Teszt\Teszt-Game\Teszt-Game\obj\Debug\net7.0\TesztGame.dll
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Teszt\Teszt-Game\Teszt-Game\obj\Debug\net7.0\refint\TesztGame.dll
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Teszt\Teszt-Game\Teszt-Game\obj\Debug\net7.0\TesztGame.pdb
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Teszt\Teszt-Game\Teszt-Game\obj\Debug\net7.0\TesztGame.genruntimeconfig.cache
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Teszt\Teszt-Game\Teszt-Game\obj\Debug\net7.0\ref\TesztGame.dll

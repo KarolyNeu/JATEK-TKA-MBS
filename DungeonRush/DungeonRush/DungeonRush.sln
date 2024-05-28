@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonRush", "DungeonRush\DungeonRush.csproj", "{BB213FCD-6501-4229-A3E1-5980502BCE69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB213FCD-6501-4229-A3E1-5980502BCE69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB213FCD-6501-4229-A3E1-5980502BCE69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB213FCD-6501-4229-A3E1-5980502BCE69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB213FCD-6501-4229-A3E1-5980502BCE69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D8C7A2C-BD5B-48F9-92CC-0B9AC9E0CC8D}
+	EndGlobalSection
+EndGlobal
