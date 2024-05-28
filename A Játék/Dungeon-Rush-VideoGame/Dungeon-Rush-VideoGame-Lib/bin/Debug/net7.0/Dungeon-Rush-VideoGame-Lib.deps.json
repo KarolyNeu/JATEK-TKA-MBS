@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Dungeon-Rush-VideoGame-Lib/1.0.0": {
+        "runtime": {
+          "Dungeon-Rush-VideoGame-Lib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Dungeon-Rush-VideoGame-Lib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,11 @@
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\A Játék\Dungeon-Rush-VideoGame\Dungeon-Rush-VideoGame-Lib\obj\Debug\net7.0\Dungeon-Rush-VideoGame-Lib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\A Játék\Dungeon-Rush-VideoGame\Dungeon-Rush-VideoGame-Lib\obj\Debug\net7.0\Dungeon-Rush-VideoGame-Lib.AssemblyInfoInputs.cache
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\A Játék\Dungeon-Rush-VideoGame\Dungeon-Rush-VideoGame-Lib\obj\Debug\net7.0\Dungeon-Rush-VideoGame-Lib.AssemblyInfo.cs
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\A Játék\Dungeon-Rush-VideoGame\Dungeon-Rush-VideoGame-Lib\obj\Debug\net7.0\Dungeon-Rush-VideoGame-Lib.csproj.CoreCompileInputs.cache
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\A Játék\Dungeon-Rush-VideoGame\Dungeon-Rush-VideoGame-Lib\bin\Debug\net7.0\Dungeon-Rush-VideoGame-Lib.deps.json
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\A Játék\Dungeon-Rush-VideoGame\Dungeon-Rush-VideoGame-Lib\bin\Debug\net7.0\Dungeon-Rush-VideoGame-Lib.dll
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\A Játék\Dungeon-Rush-VideoGame\Dungeon-Rush-VideoGame-Lib\bin\Debug\net7.0\Dungeon-Rush-VideoGame-Lib.pdb
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\A Játék\Dungeon-Rush-VideoGame\Dungeon-Rush-VideoGame-Lib\obj\Debug\net7.0\Dungeon-Rush-VideoGame-Lib.dll
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\A Játék\Dungeon-Rush-VideoGame\Dungeon-Rush-VideoGame-Lib\obj\Debug\net7.0\refint\Dungeon-Rush-VideoGame-Lib.dll
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\A Játék\Dungeon-Rush-VideoGame\Dungeon-Rush-VideoGame-Lib\obj\Debug\net7.0\Dungeon-Rush-VideoGame-Lib.pdb
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\A Játék\Dungeon-Rush-VideoGame\Dungeon-Rush-VideoGame-Lib\obj\Debug\net7.0\ref\Dungeon-Rush-VideoGame-Lib.dll
