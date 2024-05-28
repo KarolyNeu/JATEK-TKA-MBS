@@ -1,0 +1,16 @@
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\DungeonRush\DungeonRush\DungeonRush\bin\Debug\net7.0\firstmap.txt
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\DungeonRush\DungeonRush\DungeonRush\bin\Debug\net7.0\secondmap.txt
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\DungeonRush\DungeonRush\DungeonRush\bin\Debug\net7.0\DungeonRush.exe
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\DungeonRush\DungeonRush\DungeonRush\bin\Debug\net7.0\DungeonRush.deps.json
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\DungeonRush\DungeonRush\DungeonRush\bin\Debug\net7.0\DungeonRush.runtimeconfig.json
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\DungeonRush\DungeonRush\DungeonRush\bin\Debug\net7.0\DungeonRush.dll
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\DungeonRush\DungeonRush\DungeonRush\bin\Debug\net7.0\DungeonRush.pdb
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\DungeonRush\DungeonRush\DungeonRush\obj\Debug\net7.0\DungeonRush.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\DungeonRush\DungeonRush\DungeonRush\obj\Debug\net7.0\DungeonRush.AssemblyInfoInputs.cache
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\DungeonRush\DungeonRush\DungeonRush\obj\Debug\net7.0\DungeonRush.AssemblyInfo.cs
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\DungeonRush\DungeonRush\DungeonRush\obj\Debug\net7.0\DungeonRush.csproj.CoreCompileInputs.cache
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\DungeonRush\DungeonRush\DungeonRush\obj\Debug\net7.0\DungeonRush.dll
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\DungeonRush\DungeonRush\DungeonRush\obj\Debug\net7.0\refint\DungeonRush.dll
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\DungeonRush\DungeonRush\DungeonRush\obj\Debug\net7.0\DungeonRush.pdb
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\DungeonRush\DungeonRush\DungeonRush\obj\Debug\net7.0\DungeonRush.genruntimeconfig.cache
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\DungeonRush\DungeonRush\DungeonRush\obj\Debug\net7.0\ref\DungeonRush.dll
