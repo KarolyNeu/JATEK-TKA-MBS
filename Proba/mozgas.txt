@@ -1,0 +1,86 @@
+using System;
+
+class Cube
+{
+    private int position; // A kocka pozíciója (1-től 9-ig)
+
+    public Cube()
+    {
+        position = 5; // Kezdeti pozíció
+    }
+
+    public void Move(char key)
+    {
+        switch (key)
+        {
+            case 'w':
+                position -= 3;
+                break;
+            case 's':
+                position += 3;
+                break;
+            case 'd':
+                position++;
+                break;
+            case 'a':
+                position--;
+                break;
+            default:
+                throw new ArgumentException("Invalid key: " + key);
+        }
+
+        if (position < 1 || position > 9)
+        {
+            throw new ArgumentException("Invalid position: " + position);
+        }
+    }
+
+    public void PrintMatrix()
+    {
+        for (int i = 1; i <= 3; i++)
+        {
+            for (int j = 1; j <= 3; j++)
+            {
+                int cellPosition = (i - 1) * 3 + j;
+                if (cellPosition == position)
+                {
+                    Console.Write("[X]");
+                }
+                else
+                {
+                    Console.Write("[ ]");
+                }
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Cube cube = new Cube();
+
+        while (true)
+        {
+
+            Console.Write("Nyomj meg egy billentyűt (w, s, d, a): ");
+            char key = Console.ReadKey().KeyChar;
+            Console.WriteLine();
+            Console.Clear();
+            try
+            {
+                cube.Move(key);
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e.Message);
+                continue;
+            }
+
+            cube.PrintMatrix();
+            
+        }
+    }
+}

@@ -13,6 +13,8 @@ namespace DungeonRush
 
         {
             Kezdes();
+            Jatek();
+
 
         }
         static void Kezdes()
@@ -26,5 +28,11 @@ namespace DungeonRush
             Console.Clear();
             Console.WriteLine("Most lábra állsz és elindulsz nehéz utadra!");
         }
+        static void Jatek()
+        {
+        
+
+        }
+
     }
 }

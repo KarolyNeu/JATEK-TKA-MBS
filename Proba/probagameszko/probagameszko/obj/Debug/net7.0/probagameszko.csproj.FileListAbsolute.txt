@@ -1,0 +1,14 @@
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\probagameszko\probagameszko\bin\Debug\net7.0\probagameszko.exe
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\probagameszko\probagameszko\bin\Debug\net7.0\probagameszko.deps.json
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\probagameszko\probagameszko\bin\Debug\net7.0\probagameszko.runtimeconfig.json
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\probagameszko\probagameszko\bin\Debug\net7.0\probagameszko.dll
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\probagameszko\probagameszko\bin\Debug\net7.0\probagameszko.pdb
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\probagameszko\probagameszko\obj\Debug\net7.0\probagameszko.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\probagameszko\probagameszko\obj\Debug\net7.0\probagameszko.AssemblyInfoInputs.cache
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\probagameszko\probagameszko\obj\Debug\net7.0\probagameszko.AssemblyInfo.cs
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\probagameszko\probagameszko\obj\Debug\net7.0\probagameszko.csproj.CoreCompileInputs.cache
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\probagameszko\probagameszko\obj\Debug\net7.0\probagameszko.dll
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\probagameszko\probagameszko\obj\Debug\net7.0\refint\probagameszko.dll
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\probagameszko\probagameszko\obj\Debug\net7.0\probagameszko.pdb
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\probagameszko\probagameszko\obj\Debug\net7.0\probagameszko.genruntimeconfig.cache
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\probagameszko\probagameszko\obj\Debug\net7.0\ref\probagameszko.dll
