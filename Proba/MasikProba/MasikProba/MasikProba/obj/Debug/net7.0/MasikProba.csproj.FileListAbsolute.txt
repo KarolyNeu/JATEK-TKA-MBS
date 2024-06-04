@@ -1,0 +1,16 @@
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\MasikProba\MasikProba\MasikProba\bin\Debug\net7.0\elsomapmatrix.txt
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\MasikProba\MasikProba\MasikProba\bin\Debug\net7.0\firstmap.txt
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\MasikProba\MasikProba\MasikProba\bin\Debug\net7.0\MasikProba.exe
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\MasikProba\MasikProba\MasikProba\bin\Debug\net7.0\MasikProba.deps.json
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\MasikProba\MasikProba\MasikProba\bin\Debug\net7.0\MasikProba.runtimeconfig.json
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\MasikProba\MasikProba\MasikProba\bin\Debug\net7.0\MasikProba.dll
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\MasikProba\MasikProba\MasikProba\bin\Debug\net7.0\MasikProba.pdb
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\MasikProba\MasikProba\MasikProba\obj\Debug\net7.0\MasikProba.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\MasikProba\MasikProba\MasikProba\obj\Debug\net7.0\MasikProba.AssemblyInfoInputs.cache
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\MasikProba\MasikProba\MasikProba\obj\Debug\net7.0\MasikProba.AssemblyInfo.cs
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\MasikProba\MasikProba\MasikProba\obj\Debug\net7.0\MasikProba.csproj.CoreCompileInputs.cache
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\MasikProba\MasikProba\MasikProba\obj\Debug\net7.0\MasikProba.dll
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\MasikProba\MasikProba\MasikProba\obj\Debug\net7.0\refint\MasikProba.dll
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\MasikProba\MasikProba\MasikProba\obj\Debug\net7.0\MasikProba.pdb
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\MasikProba\MasikProba\MasikProba\obj\Debug\net7.0\MasikProba.genruntimeconfig.cache
+C:\Users\Karesz\Desktop\Jatekterv\JATEK-TKA-MBS\Proba\MasikProba\MasikProba\MasikProba\obj\Debug\net7.0\ref\MasikProba.dll
