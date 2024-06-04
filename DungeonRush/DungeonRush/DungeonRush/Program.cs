@@ -13,7 +13,9 @@ namespace DungeonRush
 
         {
             Kezdes();
-            Jatek();
+            JatekElso();
+            EgyKetto();
+            JatekMasodik();
 
         }
         static void lassuKiirás(string szöveg, double szünetMásodperc)
@@ -37,9 +39,9 @@ namespace DungeonRush
             lassuKiirás("\tMost lábra állsz és elindulsz a nehéz utadra", 0.1);
             Console.WriteLine();
         }
-        static void Jatek()
+        static void JatekElso()
         {
-
+            bool jatekvege = true;
             // Mátrix definiálása
             int[,] palyaegy = new int[,] {
 { 1,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,1,0,0,0,1 },
@@ -57,7 +59,7 @@ namespace DungeonRush
             int kockaY = 6;
 
             // Fő ciklus
-            while (true)
+            while (jatekvege)
             {
                 // Mátrix kiírása
 
@@ -100,19 +102,19 @@ namespace DungeonRush
 
                 if (billentyu == 'w')
                 {
-                        kockaY -= 1;
+                    kockaY -= 1;
                 }
                 else if (billentyu == 's')
                 {
-                        kockaY += 1;
+                    kockaY += 1;
                 }
                 else if (billentyu == 'a')
                 {
-                        kockaX -= 1;
+                    kockaX -= 1;
                 }
                 else if (billentyu == 'd')
                 {
-                        kockaX += 1;
+                    kockaX += 1;
                 }
                 // Határok ellenőrzése
                 if (kockaX < 0 || kockaX >= palyaegy.GetLength(1) ||
@@ -122,10 +124,118 @@ namespace DungeonRush
                     kockaX -= 10;
                     kockaY = 6;
                 }
+                if (palyaegy[kockaY, kockaX] == 4)
+                {
+                    jatekvege = false;
+                }
+                Console.Clear();
+            }
+        }
+        static void EgyKetto() { 
+
+        lassuKiirás($"\tSikerült kijutnod az első pályáról gratulálok!{jelenlegiJatekos.Nev}", 0.3);
+        Console.Clear();
+        lassuKiirás($"\tDe a küldetésednek nincsen vége. \n\tMenj tovább és ne állj meg!", 0.2);
+        lassuKiirás("\n\tAmint készen állsz nyomj meg egy billentyűt!", 0.2);
+        Console.ReadKey();
+        Console.Clear();
+        }
+        static void JatekMasodik()
+        {
+            bool jatekvege = true;
+            // Mátrix definiálása
+            int[,] palyaegy = new int[,] {
+            { 0, 1, 2, 2, 2, 2, 2, 2 , 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1 ,0 ,0, 0, 1 , 2, 2, 2, 2, 2, 1},
+            { 0, 1, 0, 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0, 0, 0 , 0, 0, 0, 0, 0, 1},
+            { 0, 1, 0, 0, 0, 2, 2, 1 , 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2 ,0 ,0, 0, 1 , 2, 2, 0, 0, 0, 1},
+            { 0, 1, 0, 4, 0, 0, 0, 1 , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0, 0, 1 , 0, 0, 0, 4, 0, 1},
+            { 0, 1, 2, 2, 0, 0, 0, 1 , 0, 0, 0, 1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1 ,0 ,0, 0, 1 , 0, 0, 0, 2, 2, 1},
+            { 0, 1, 0, 0, 0, 0, 0, 0 , 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 ,0 ,0, 0, 0 , 0, 0, 0, 0, 0, 1},
+            { 0, 1, 0, 0, 0, 2, 2, 2 , 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 1 ,2 ,2, 2, 2 , 2, 2, 0, 0, 0, 1},
+            { 0, 1, 0, 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0, 0, 0 , 0, 0, 0, 0, 0, 1},
+            { 0, 1, 2, 2, 0, 0, 0, 2 , 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ,2 ,2, 2, 2 , 2, 2, 2, 2, 2, 1}
+        };
+
+
+            // Kocka pozíciója
+            int kockaX = 10;
+            int kockaY = 6;
+
+            // Fő ciklus
+            while (jatekvege)
+            {
+                // Mátrix kiírása
+
+                for (int i = 0; i < palyaegy.GetLength(0); i++)
+                {
+                    for (int j = 0; j < palyaegy.GetLength(1); j++)
+                    {
+                        if (i == kockaY && j == kockaX)
+                        {
+                            Console.Write("X"); // Kocka karaktere
+                        }
+                        else if (palyaegy[i, j] == 1)
+                        {
+                            Console.Write("║"); // Kocka karaktere
+                        }
+                        else if (palyaegy[i, j] == 2)
+                        {
+                            Console.Write("═");
+                        }
+                        else if (palyaegy[i, j] == 4)
+                        {
+                            Console.Write("+");
+                        }
+                        else if (palyaegy[i, j] == 0)
+                        {
+                            Console.Write(" ");
+                        }
+                    }
+                    Console.WriteLine();
+                }
+
+
+
+                Console.Write("Nyomj meg egy billentyűt (w, s, d, a): ");
+                Console.WriteLine(palyaegy[kockaY, kockaX]);
+
+                char billentyu = Console.ReadKey().KeyChar;
+                Console.Clear();
+
+
+                if (billentyu == 'w')
+                {
+                    kockaY -= 1;
+                }
+                else if (billentyu == 's')
+                {
+                    kockaY += 1;
+                }
+                else if (billentyu == 'a')
+                {
+                    kockaX -= 1;
+                }
+                else if (billentyu == 'd')
+                {
+                    kockaX += 1;
+                }
+                // Határok ellenőrzése
+                if (kockaX < 0 || kockaX >= palyaegy.GetLength(1) ||
+                kockaY < 0 || kockaY >= palyaegy.GetLength(0))
+                {
+                    Console.WriteLine("Határt túllépted!");
+                    kockaX -= 10;
+                    kockaY = 6;
+                }
+                if (palyaegy[kockaY, kockaX] == 4)
+                {
+                    jatekvege = false;
+                }
                 Console.Clear();
             }
         }
     }
+
 }
 
     
