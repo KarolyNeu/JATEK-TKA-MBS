@@ -107,8 +107,8 @@ namespace DungeonRush
         static void Main(string[] args)
 
         {
-            JatekElso();
             Kezdes();
+            JatekElso();
             EgyKetto();
             JatekMasodik();
             KettoHarom();
@@ -140,10 +140,9 @@ namespace DungeonRush
         }
         static void JatekElso()
         {
-            int szornyelet = 15;
             bool harcvan = false;
             bool jatekvege = true;
-            // Mátrix definiálása
+
             int[,] palyaegy = new int[,] {
         { 1,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,1,2,2,2,1 },
         { 1,0,5,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,4 },
@@ -155,12 +154,16 @@ namespace DungeonRush
         { 1,2,2,2,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,1 }
                 };
 
-            // Kocka pozíciója
             int kockaX = 10;
             int kockaY = 6;
             Random random = new Random();
             int penzes = random.Next(1, 5);
             int hp = random.Next(1, 3);
+            int zombitamadas = random.Next(1, Zombi.Ero);
+
+            int jatekostamad = random.Next(1, jelenlegiJatekos.Ero);
+
+
             // Fő ciklus
 
             while (jatekvege && jelenlegiJatekos.Elet > 0)
@@ -207,7 +210,7 @@ namespace DungeonRush
 
                 Console.Write("Nyomj meg egy billentyűt (w, s, d, a): ");
                 Console.WriteLine();
-                Console.WriteLine($"A {jelenlegiJatekos.Nev} pénze: {jelenlegiJatekos.Penz}");
+                Console.WriteLine($"A {jelenlegiJatekos.Nev}\nPénze: {jelenlegiJatekos.Penz}\nÉlete: {jelenlegiJatekos.Elet}");
                 Console.WriteLine(palyaegy[kockaY, kockaX]);
 
                 char billentyu = Console.ReadKey().KeyChar;
@@ -277,17 +280,16 @@ namespace DungeonRush
                             char megadas = Console.ReadKey().KeyChar;
                             if (megadas == 'a')
                             {
-                                int tamadas = random.Next(1, 4);
-                                int szornytamad = random.Next(1, 3);
-                                Zombi.Elet = Zombi.Elet - tamadas;
-                                if (tamadas > 2)
+                                if (jatekostamad > 3)
                                 {
                                     Console.WriteLine();
                                     Console.WriteLine(" Kritikus csapás!");
-                                    jelenlegiJatekos.Elet = jelenlegiJatekos.Elet - szornytamad;
-                                    Console.WriteLine($"A szörny ennyit támadott: {szornytamad}");
 
                                 }
+                                Zombi.Elet = Zombi.Elet - jatekostamad;
+                                jelenlegiJatekos.Elet = jelenlegiJatekos.Elet - zombitamadas;
+                                Console.WriteLine($"A szörny ennyit támadott: {zombitamadas}");
+
                                 
 
                             }
@@ -299,9 +301,10 @@ namespace DungeonRush
                             {
                                 harcvan = false;
                             }
-                            else if (megadas == 'h')
+                            else if (megadas == 'h' && (jelenlegiJatekos.Elet + hp) <= 15)
                             {
-                                jelenlegiJatekos.Elet = 
+                                jelenlegiJatekos.Elet += hp;
+                                Console.WriteLine($"Ennyit healeltél: {hp}");
                             }
 
                         }
@@ -336,7 +339,8 @@ namespace DungeonRush
             }
         static void JatekMasodik()
             {
-                bool jatekvege = true;
+            bool harcvan = false;
+            bool jatekvege = true;
                 // Mátrix definiálása
                 int[,] palyaegy = new int[,] {
                     { 0, 1, 2, 2, 2, 2, 2, 2 , 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1 ,4 ,4, 4, 1 , 2, 2, 2, 2, 2, 1},
@@ -355,80 +359,177 @@ namespace DungeonRush
                 int kockaX = 5;
                 int kockaY = 8;
 
-                // Fő ciklus
-                while (jatekvege)
+            // Fő ciklus
+            Random random = new Random();
+            int penzes = random.Next(1, 5);
+            int hp = random.Next(1, 3);
+            int zombitamadas = random.Next(1, Zombi.Ero);
+
+            int jatekostamad = random.Next(1, jelenlegiJatekos.Ero);
+
+
+            // Fő ciklus
+
+            while (jatekvege && jelenlegiJatekos.Elet > 0)
+            {
+                // Mátrix kiírása
+
+                for (int i = 0; i < palyaegy.GetLength(0); i++)
                 {
-                    // Mátrix kiírása
-
-                    for (int i = 0; i < palyaegy.GetLength(0); i++)
+                    for (int j = 0; j < palyaegy.GetLength(1); j++)
                     {
-                        for (int j = 0; j < palyaegy.GetLength(1); j++)
+                        if (i == kockaY && j == kockaX)
                         {
-                            if (i == kockaY && j == kockaX)
-                            {
-                                Console.Write("X"); // Kocka karaktere
-                            }
-                            else if (palyaegy[i, j] == 1)
-                            {
-                                Console.Write("║"); // Kocka karaktere
-                            }
-                            else if (palyaegy[i, j] == 2)
-                            {
-                                Console.Write("═");
-                            }
-                            else if (palyaegy[i, j] == 4)
-                            {
-                                Console.Write("+");
-                            }
-                            else if (palyaegy[i, j] == 0)
-                            {
-                                Console.Write(" ");
-                            }
+                            Console.Write("X"); // Kocka karaktere
                         }
-                        Console.WriteLine();
+                        else if (palyaegy[i, j] == 1)
+                        {
+                            Console.Write("║"); // Kocka karaktere
+                        }
+                        else if (palyaegy[i, j] == 2)
+                        {
+                            Console.Write("═");
+                        }
+                        else if (palyaegy[i, j] == 4)
+                        {
+                            Console.Write("+");
+                        }
+                        else if (palyaegy[i, j] == 0)
+                        {
+                            Console.Write(" ");
+                        }
+                        else if (palyaegy[i, j] == 5)
+                        {
+                            Console.Write("*");
+                        }
+                        else if (palyaegy[i, j] == 6)
+                        {
+                            Console.Write("!");
+                        }
                     }
+                    Console.WriteLine();
+                }
 
 
 
-                    Console.Write("Nyomj meg egy billentyűt (w, s, d, a): ");
-                    Console.WriteLine(palyaegy[kockaY, kockaX]);
+                Console.Write("Nyomj meg egy billentyűt (w, s, d, a): ");
+                Console.WriteLine();
+                Console.WriteLine($"A {jelenlegiJatekos.Nev}\nPénze: {jelenlegiJatekos.Penz}\nÉlete: {jelenlegiJatekos.Elet}");
+                Console.WriteLine(palyaegy[kockaY, kockaX]);
 
-                    char billentyu = Console.ReadKey().KeyChar;
-                    Console.Clear();
+                char billentyu = Console.ReadKey().KeyChar;
+                Console.Clear();
 
 
-                    if (billentyu == 'w')
+                if (billentyu == 'w')
+                {
+                    if (palyaegy[kockaY - 1, kockaX] != 1 && palyaegy[kockaY - 1, kockaX] != 2)
                     {
                         kockaY -= 1;
                     }
-                    else if (billentyu == 's')
+                }
+                else if (billentyu == 's')
+                {
+                    if (palyaegy[kockaY + 1, kockaX] != 1 && palyaegy[kockaY + 1, kockaX] != 2)
                     {
                         kockaY += 1;
                     }
-                    else if (billentyu == 'a')
+                }
+                else if (billentyu == 'a')
+                {
+                    if (palyaegy[kockaY, kockaX - 1] != 1 && palyaegy[kockaY, kockaX - 1] != 2)
                     {
                         kockaX -= 1;
                     }
-                    else if (billentyu == 'd')
+                }
+                else if (billentyu == 'd')
+                {
+                    if (palyaegy[kockaY, kockaX + 1] != 1 && palyaegy[kockaY, kockaX + 1] != 2)
                     {
                         kockaX += 1;
                     }
-                    // Határok ellenőrzése
-                    if (kockaX < 0 || kockaX >= palyaegy.GetLength(1) ||
-                    kockaY < 0 || kockaY >= palyaegy.GetLength(0))
-                    {
-                        Console.WriteLine("Határt túllépted!");
-                        kockaX -= 10;
-                        kockaY = 6;
-                    }
-                    if (palyaegy[kockaY, kockaX] == 4)
-                    {
-                        jatekvege = false;
+                }
+                // Határok ellenőrzése
 
+                if (palyaegy[kockaY, kockaX] == 4)
+                {
+                    jatekvege = false;
+                }
+                if (palyaegy[kockaY, kockaX] == 5)
+                {
+                    jelenlegiJatekos.Penz += penzes;
+                    palyaegy[kockaY, kockaX] = 0;
+                }
+
+                if (palyaegy[kockaY, kockaX] == 6)
+                {
+                    harcvan = true;
+                    while (harcvan == true)
+                    {
+                        if (jelenlegiJatekos.Elet > 0)
+                        {
+
+
+                            Console.WriteLine($"A szörny életereje: {Zombi.Elet}");
+                            Console.WriteLine($"A szörny rajza: {Zombi.Rajz}");
+                            Console.WriteLine();
+                            Console.WriteLine($"=====================");
+                            Console.WriteLine($"| (A)ttack (D)efend |");
+                            Console.WriteLine($"| (R)un    (H)eal   |");
+                            Console.WriteLine($"=====================");
+                            Console.WriteLine();
+                            Console.WriteLine($"A {jelenlegiJatekos.Nev} életereje: {jelenlegiJatekos.Elet}");
+                            Console.Write("Nyomj meg egy billentyűt (a,d,r, h): ");
+                            Console.WriteLine();
+                            char megadas = Console.ReadKey().KeyChar;
+                            if (megadas == 'a')
+                            {
+                                if (jatekostamad > 3)
+                                {
+                                    Console.WriteLine();
+                                    Console.WriteLine(" Kritikus csapás!");
+
+                                }
+                                Zombi.Elet = Zombi.Elet - jatekostamad;
+                                jelenlegiJatekos.Elet = jelenlegiJatekos.Elet - zombitamadas;
+                                Console.WriteLine($"A szörny ennyit támadott: {zombitamadas}");
+
+
+
+                            }
+                            else if (megadas == 'd')
+                            {
+                                Console.WriteLine("Kivédted a támadást!");
+                            }
+                            else if (megadas == 'r')
+                            {
+                                harcvan = false;
+                            }
+                            else if (megadas == 'h' && (jelenlegiJatekos.Elet + hp) <= 15)
+                            {
+                                jelenlegiJatekos.Elet += hp;
+                                Console.WriteLine($"Ennyit healeltél: {hp}");
+                            }
+
+                        }
+                        else
+                        {
+                            jatekvege = false;
+                        }
+                        if (Zombi.Elet < 0)
+                        {
+                            Console.WriteLine($"A játékos ennyi pénzt nyert el a harcból: {penzes}");
+                            jelenlegiJatekos.Penz += penzes;
+                            harcvan = false;
+                            palyaegy[kockaY, kockaX] = 0;
+                        }
+
+
+                        Console.Clear();
                     }
-                    Console.Clear();
                 }
             }
+        }
         static void KettoHarom()
             {
 
@@ -441,98 +542,191 @@ namespace DungeonRush
             }
             static void JatekHarmadik()
             {
-                bool jatekvege = true;
+            bool harcvan = false;
+            bool jatekvege = true;
                 // Mátrix definiálása
-                int[,] palyaharom = new int[,] {
+                int[,] palyaegy = new int[,] {
         {1, 2, 2, 2, 2, 2, 1, 4, 4, 4, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1},
         {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-        {1, 0, 0, 0, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 1, 0, 0, 0, 1, 2, 2, 0, 0, 0, 1},
+        {1, 0, 0, 5, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 1, 0, 0, 0, 1, 2, 2, 0, 0, 0, 1},
         {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1},
         {1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 2, 2, 1},
-        {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 6, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
         {1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1},
         {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
         {1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 0, 0, 0, 2, 2, 2, 1}
                 };
 
+            int kockaX = 5;
+            int kockaY = 8;
 
-                // Kocka pozíciója
-                int kockaX = 35;
-                int kockaY = 8;
+            // Fő ciklus
+            Random random = new Random();
+            int penzes = random.Next(1, 5);
+            int hp = random.Next(1, 3);
+            int zombitamadas = random.Next(1, Zombi.Ero);
 
-                // Fő ciklus
-                while (jatekvege)
+            int jatekostamad = random.Next(1, jelenlegiJatekos.Ero);
+            while (jatekvege && jelenlegiJatekos.Elet > 0)
+            {
+                // Mátrix kiírása
+
+                for (int i = 0; i < palyaegy.GetLength(0); i++)
                 {
-                    // Mátrix kiírása
-
-                    for (int i = 0; i < palyaharom.GetLength(0); i++)
+                    for (int j = 0; j < palyaegy.GetLength(1); j++)
                     {
-                        for (int j = 0; j < palyaharom.GetLength(1); j++)
+                        if (i == kockaY && j == kockaX)
                         {
-                            if (i == kockaY && j == kockaX)
-                            {
-                                Console.Write("X"); // Kocka karaktere
-                            }
-                            else if (palyaharom[i, j] == 1)
-                            {
-                                Console.Write("║"); // Kocka karaktere
-                            }
-                            else if (palyaharom[i, j] == 2)
-                            {
-                                Console.Write("═");
-                            }
-                            else if (palyaharom[i, j] == 4)
-                            {
-                                Console.Write("+");
-                            }
-                            else if (palyaharom[i, j] == 0)
-                            {
-                                Console.Write(" ");
-                            }
+                            Console.Write("X"); // Kocka karaktere
                         }
-                        Console.WriteLine();
+                        else if (palyaegy[i, j] == 1)
+                        {
+                            Console.Write("║"); // Kocka karaktere
+                        }
+                        else if (palyaegy[i, j] == 2)
+                        {
+                            Console.Write("═");
+                        }
+                        else if (palyaegy[i, j] == 4)
+                        {
+                            Console.Write("+");
+                        }
+                        else if (palyaegy[i, j] == 0)
+                        {
+                            Console.Write(" ");
+                        }
+                        else if (palyaegy[i, j] == 5)
+                        {
+                            Console.Write("*");
+                        }
+                        else if (palyaegy[i, j] == 6)
+                        {
+                            Console.Write("!");
+                        }
                     }
+                    Console.WriteLine();
+                }
 
 
 
-                    Console.Write("Nyomj meg egy billentyűt (w, s, d, a): ");
-                    Console.WriteLine(palyaharom[kockaY, kockaX]);
+                Console.Write("Nyomj meg egy billentyűt (w, s, d, a): ");
+                Console.WriteLine();
+                Console.WriteLine($"A {jelenlegiJatekos.Nev}\nPénze: {jelenlegiJatekos.Penz}\nÉlete: {jelenlegiJatekos.Elet}");
+                Console.WriteLine(palyaegy[kockaY, kockaX]);
 
-                    char billentyu = Console.ReadKey().KeyChar;
-                    Console.Clear();
+                char billentyu = Console.ReadKey().KeyChar;
+                Console.Clear();
 
 
-                    if (billentyu == 'w')
+                if (billentyu == 'w')
+                {
+                    if (palyaegy[kockaY - 1, kockaX] != 1 && palyaegy[kockaY - 1, kockaX] != 2)
                     {
                         kockaY -= 1;
                     }
-                    else if (billentyu == 's')
+                }
+                else if (billentyu == 's')
+                {
+                    if (palyaegy[kockaY + 1, kockaX] != 1 && palyaegy[kockaY + 1, kockaX] != 2)
                     {
                         kockaY += 1;
                     }
-                    else if (billentyu == 'a')
+                }
+                else if (billentyu == 'a')
+                {
+                    if (palyaegy[kockaY, kockaX - 1] != 1 && palyaegy[kockaY, kockaX - 1] != 2)
                     {
                         kockaX -= 1;
                     }
-                    else if (billentyu == 'd')
+                }
+                else if (billentyu == 'd')
+                {
+                    if (palyaegy[kockaY, kockaX + 1] != 1 && palyaegy[kockaY, kockaX + 1] != 2)
                     {
                         kockaX += 1;
                     }
-                    // Határok ellenőrzése
-                    if (kockaX < 0 || kockaX >= palyaharom.GetLength(1) ||
-                    kockaY < 0 || kockaY >= palyaharom.GetLength(0))
+                }
+                // Határok ellenőrzése
+
+                if (palyaegy[kockaY, kockaX] == 4)
+                {
+                    jatekvege = false;
+                }
+                if (palyaegy[kockaY, kockaX] == 5)
+                {
+                    jelenlegiJatekos.Penz += penzes;
+                    palyaegy[kockaY, kockaX] = 0;
+                }
+
+                if (palyaegy[kockaY, kockaX] == 6)
+                {
+                    harcvan = true;
+                    while (harcvan == true)
                     {
-                        Console.WriteLine("Határt túllépted!");
-                        kockaX -= 10;
-                        kockaY = 6;
+                        if (jelenlegiJatekos.Elet > 0)
+                        {
+
+
+                            Console.WriteLine($"A szörny életereje: {Zombi.Elet}");
+                            Console.WriteLine($"A szörny rajza: {Zombi.Rajz}");
+                            Console.WriteLine();
+                            Console.WriteLine($"=====================");
+                            Console.WriteLine($"| (A)ttack (D)efend |");
+                            Console.WriteLine($"| (R)un    (H)eal   |");
+                            Console.WriteLine($"=====================");
+                            Console.WriteLine();
+                            Console.WriteLine($"A {jelenlegiJatekos.Nev} életereje: {jelenlegiJatekos.Elet}");
+                            Console.Write("Nyomj meg egy billentyűt (a,d,r, h): ");
+                            Console.WriteLine();
+                            char megadas = Console.ReadKey().KeyChar;
+                            if (megadas == 'a')
+                            {
+                                if (jatekostamad > 3)
+                                {
+                                    Console.WriteLine();
+                                    Console.WriteLine(" Kritikus csapás!");
+
+                                }
+                                Zombi.Elet = Zombi.Elet - jatekostamad;
+                                jelenlegiJatekos.Elet = jelenlegiJatekos.Elet - zombitamadas;
+                                Console.WriteLine($"A szörny ennyit támadott: {zombitamadas}");
+
+
+
+                            }
+                            else if (megadas == 'd')
+                            {
+                                Console.WriteLine("Kivédted a támadást!");
+                            }
+                            else if (megadas == 'r')
+                            {
+                                harcvan = false;
+                            }
+                            else if (megadas == 'h' && (jelenlegiJatekos.Elet + hp) <= 15)
+                            {
+                                jelenlegiJatekos.Elet += hp;
+                                Console.WriteLine($"Ennyit healeltél: {hp}");
+                            }
+
+                        }
+                        else
+                        {
+                            jatekvege = false;
+                        }
+                        if (Zombi.Elet < 0)
+                        {
+                            Console.WriteLine($"A játékos ennyi pénzt nyert el a harcból: {penzes}");
+                            jelenlegiJatekos.Penz += penzes;
+                            harcvan = false;
+                            palyaegy[kockaY, kockaX] = 0;
+                        }
+
+
+                        Console.Clear();
                     }
-                    if (palyaharom[kockaY, kockaX] == 4)
-                    {
-                        jatekvege = false;
-                    }
-                    Console.Clear();
                 }
             }
+        }
         static void HaromNegy()
             {
 
