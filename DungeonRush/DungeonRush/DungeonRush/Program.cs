@@ -101,6 +101,9 @@ namespace DungeonRush
     {
         public static Jatekos jelenlegiJatekos = new Jatekos();
         public static Szorny Zombi = new Szorny("Zombi", "[¬º -°]¬", 3, 15);
+        public static Szorny Csonti = new Szorny("Csonti", "[|°-_-°|]", 5, 12);
+        public static Szorny Vampir = new Szorny("Vampir", "[° |W| °]", 5, 12);
+        public static Szorny Ryuk = new Szorny("Ryuk", "(˛^:-¤-:^˛)", 7, 50);
 
         public static int Elet { get; private set; }
 
@@ -117,6 +120,7 @@ namespace DungeonRush
             Vegso();
             Vege();
         }
+
         static void lassuKiirás(string szöveg, double szünetMásodperc)
         {
             for (int i = 0; i < szöveg.Length; i++)
@@ -130,7 +134,7 @@ namespace DungeonRush
             lassuKiirás("\tDungeon Rush The Videogame!", 0.1);
             Console.WriteLine();
             lassuKiirás("\tAdja meg a játékos nevét: ", 0.1);
-            jelenlegiJatekos.Nev = Console.ReadLine();
+            jelenlegiJatekos.Nev = Console.ReadLine()!;
             lassuKiirás("\tFelébredtél egy sötét bányában azzal a küldetéssel,\n\tlegyőzd az ördögöt és zárd vissza a pecsétjébe.", 0.1);
             lassuKiirás("\n\tAmint készen állsz nyomj meg egy billentyűt!", 0.1);
             Console.ReadKey();
@@ -142,6 +146,7 @@ namespace DungeonRush
         {
             bool harcvan = false;
             bool jatekvege = true;
+
 
             int[,] palyaegy = new int[,] {
         { 1,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,1,2,2,2,1 },
@@ -343,15 +348,15 @@ namespace DungeonRush
             bool jatekvege = true;
                 // Mátrix definiálása
                 int[,] palyaegy = new int[,] {
-                    { 0, 1, 2, 2, 2, 2, 2, 2 , 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1 ,4 ,4, 4, 1 , 2, 2, 2, 2, 2, 1},
-                    { 0, 1, 0, 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0, 0, 0 , 0, 0, 0, 0, 0, 1},
-                    { 0, 1, 0, 0, 0, 2, 2, 1 , 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2 ,0 ,0, 0, 1 , 2, 2, 0, 0, 0, 1},
-                    { 0, 1, 0, 0, 0, 0, 0, 1 , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0, 0, 1 , 0, 0, 0, 0, 0, 1},
-                    { 0, 1, 2, 2, 0, 0, 0, 1 , 0, 0, 0, 1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1 ,0 ,0, 0, 1 , 0, 0, 0, 2, 2, 1},
-                    { 0, 1, 0, 0, 0, 0, 0, 0 , 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 ,0 ,0, 0, 0 , 0, 0, 0, 0, 0, 1},
-                    { 0, 1, 0, 0, 0, 2, 2, 2 , 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 1 ,2 ,2, 2, 2 , 2, 2, 0, 0, 0, 1},
-                    { 0, 1, 0, 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0, 0, 0 , 0, 0, 0, 0, 0, 1},
-                    { 0, 1, 2, 2, 0, 0, 0, 2 , 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ,2 ,2, 2, 2 , 2, 2, 2, 2, 2, 1}
+                    { 0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1 ,4 ,4, 4, 1 , 2, 2, 2, 2, 2, 1},
+                    { 0, 1, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0 ,0 ,0, 0, 0 , 0, 0, 0, 5, 0, 1},
+                    { 0, 1, 0, 0, 0, 2, 2, 1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2 ,0 ,0, 0, 1 , 2, 2, 0, 0, 0, 1},
+                    { 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0, 0, 1 , 0, 0, 0, 0, 0, 1},
+                    { 0, 1, 2, 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1 ,0 ,0, 0, 1 , 0, 0, 0, 2, 2, 1},
+                    { 0, 1, 0, 5, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 5, 0, 0, 0, 0, 0, 0, 0, 0, 1 ,0 ,0, 0, 0 , 0, 0, 0, 0, 0, 1},
+                    { 0, 1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 0, 0, 5, 1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 1 ,2 ,2, 2, 2 , 2, 2, 0, 0, 0, 1},
+                    { 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,0, 0, 0 , 0, 0, 0, 0, 0, 1},
+                    { 0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ,2 ,2, 2, 2 , 2, 2, 2, 2, 2, 1}
                 };
 
 
@@ -470,8 +475,8 @@ namespace DungeonRush
                         {
 
 
-                            Console.WriteLine($"A szörny életereje: {Zombi.Elet}");
-                            Console.WriteLine($"A szörny rajza: {Zombi.Rajz}");
+                            Console.WriteLine($"A szörny életereje: {Csonti.Elet}");
+                            Console.WriteLine($"A szörny rajza: {Csonti.Rajz}");
                             Console.WriteLine();
                             Console.WriteLine($"=====================");
                             Console.WriteLine($"| (A)ttack (D)efend |");
@@ -490,7 +495,7 @@ namespace DungeonRush
                                     Console.WriteLine(" Kritikus csapás!");
 
                                 }
-                                Zombi.Elet = Zombi.Elet - jatekostamad;
+                                Csonti.Elet = Csonti.Elet - jatekostamad;
                                 jelenlegiJatekos.Elet = jelenlegiJatekos.Elet - zombitamadas;
                                 Console.WriteLine($"A szörny ennyit támadott: {zombitamadas}");
 
@@ -516,7 +521,7 @@ namespace DungeonRush
                         {
                             jatekvege = false;
                         }
-                        if (Zombi.Elet < 0)
+                        if (Csonti.Elet < 0)
                         {
                             Console.WriteLine($"A játékos ennyi pénzt nyert el a harcból: {penzes}");
                             jelenlegiJatekos.Penz += penzes;
@@ -547,24 +552,24 @@ namespace DungeonRush
                 // Mátrix definiálása
                 int[,] palyaegy = new int[,] {
         {1, 2, 2, 2, 2, 2, 1, 4, 4, 4, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1},
-        {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
         {1, 0, 0, 5, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 1, 0, 0, 0, 1, 2, 2, 0, 0, 0, 1},
         {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1},
         {1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 2, 2, 1},
         {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 6, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-        {1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1},
+        {1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 0, 5, 0, 1, 0, 0, 0, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1},
         {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-        {1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 0, 0, 0, 2, 2, 2, 1}
+        {1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1}
                 };
 
-            int kockaX = 5;
-            int kockaY = 8;
+            int kockaX = 38;
+            int kockaY = 7;
 
             // Fő ciklus
             Random random = new Random();
             int penzes = random.Next(1, 5);
             int hp = random.Next(1, 3);
-            int zombitamadas = random.Next(1, Zombi.Ero);
+            int zombitamadas = random.Next(1, Vampir.Ero);
 
             int jatekostamad = random.Next(1, jelenlegiJatekos.Ero);
             while (jatekvege && jelenlegiJatekos.Elet > 0)
@@ -667,8 +672,8 @@ namespace DungeonRush
                         {
 
 
-                            Console.WriteLine($"A szörny életereje: {Zombi.Elet}");
-                            Console.WriteLine($"A szörny rajza: {Zombi.Rajz}");
+                            Console.WriteLine($"A szörny életereje: {Vampir.Elet}");
+                            Console.WriteLine($"A szörny rajza: {Vampir.Rajz}");
                             Console.WriteLine();
                             Console.WriteLine($"=====================");
                             Console.WriteLine($"| (A)ttack (D)efend |");
@@ -687,7 +692,7 @@ namespace DungeonRush
                                     Console.WriteLine(" Kritikus csapás!");
 
                                 }
-                                Zombi.Elet = Zombi.Elet - jatekostamad;
+                                Vampir.Elet = Vampir.Elet - jatekostamad;
                                 jelenlegiJatekos.Elet = jelenlegiJatekos.Elet - zombitamadas;
                                 Console.WriteLine($"A szörny ennyit támadott: {zombitamadas}");
 
@@ -702,7 +707,7 @@ namespace DungeonRush
                             {
                                 harcvan = false;
                             }
-                            else if (megadas == 'h' && (jelenlegiJatekos.Elet + hp) <= 15)
+                            else if (megadas == 'h' && (jelenlegiJatekos.Elet + hp) <= 25)
                             {
                                 jelenlegiJatekos.Elet += hp;
                                 Console.WriteLine($"Ennyit healeltél: {hp}");
@@ -713,7 +718,7 @@ namespace DungeonRush
                         {
                             jatekvege = false;
                         }
-                        if (Zombi.Elet < 0)
+                        if (Vampir.Elet < 0)
                         {
                             Console.WriteLine($"A játékos ennyi pénzt nyert el a harcból: {penzes}");
                             jelenlegiJatekos.Penz += penzes;
@@ -738,38 +743,59 @@ namespace DungeonRush
                 Console.Clear();
             }
         static void Vegso()
-            {
+                {
+                 Random random = new Random();
+                 int penzes = random.Next(1, 5);
+                 int hp = random.Next(1, 3);
+                 int zombitamadas = random.Next(1, Ryuk.Ero);
+
+                int jatekostamad = random.Next(1, jelenlegiJatekos.Ero);
                 bool jatekvege = true;
-                lassuKiirás($"\n\tA szörny életereje: {Zombi.Elet} és neve: {Zombi.Nev}!", 0.1);
+                lassuKiirás($"\n\tA szörny életereje: {Ryuk.Elet} és neve: {Ryuk.Nev}!", 0.1);
                 while (jatekvege)
                 {
-                    Console.WriteLine($"A szörny életereje: {Zombi.Elet}");
-                    Console.WriteLine();
+                    Console.WriteLine($"A szörny neve: {Ryuk.Nev} életereje: {Ryuk.Elet}");
+                    Console.WriteLine($"A szörny rajza: {Ryuk.Rajz}");
+                Console.WriteLine();
                     Console.WriteLine($"=====================");
                     Console.WriteLine($"| (A)ttack (D)efend |");
-                    Console.WriteLine($"| (R)un    (H)eal   |");
+                    Console.WriteLine($"|      (H)eal       |");
                     Console.WriteLine($"=====================");
                     Console.WriteLine();
+                    Console.WriteLine($"A {jelenlegiJatekos.Nev} életereje: {jelenlegiJatekos.Elet}");
                     Console.Write("Nyomj meg egy billentyűt (a,d,r, h): ");
                     Console.WriteLine();
                     char megadas = Console.ReadKey().KeyChar;
 
-                    if (megadas == 'a')
+                if (megadas == 'a')
+                {
+                    if (jatekostamad > 2)
                     {
-                        Random random = new Random();
-                        int tamadas = random.Next(1, 4);
-                        Zombi.Elet = Zombi.Elet - tamadas;
-                        if (tamadas > 2)
-                        {
-                            Console.WriteLine();
-                            Console.WriteLine(" Kritikus csapás!");
-                        }
+                        Console.WriteLine();
+                        Console.WriteLine(" Kritikus csapás!");
 
                     }
-                    if (Zombi.Elet < 0)
+                    Ryuk.Elet = Ryuk.Elet - jatekostamad;
+                    jelenlegiJatekos.Elet = jelenlegiJatekos.Elet - zombitamadas;
+                    Console.WriteLine($"A szörny ennyit támadott: {zombitamadas}");
+
+
+
+                }
+                else if (megadas == 'd')
+                {
+                    Console.WriteLine("Kivédted a támadást!");
+                }
+                else if (megadas == 'h' && (jelenlegiJatekos.Elet + hp) <= 35)
+                {
+                    jelenlegiJatekos.Elet += hp;
+                    Console.WriteLine($"Ennyit healeltél: {hp}");
+                }
+                if (Ryuk.Elet < 0)
                     {
                         jatekvege = false;
                     }
+
                 }
 
 
@@ -778,7 +804,7 @@ namespace DungeonRush
         static void Vege()
             {
                 Console.WriteLine();
-                lassuKiirás($"\tGratulálok {jelenlegiJatekos.Nev} a küldetésed sikeres volt!", 0.2);
+                lassuKiirás($"\tGratulálok {jelenlegiJatekos.Nev} a küldetésed sikeres volt ennyi aranyat szedtél össze: {jelenlegiJatekos.Penz}!", 0.2);
                 Console.Clear();
                 lassuKiirás($"\n\tViszont egy olyan információ jár körül a legközelebbi faluban ,hogy egy démon uralkodik ott.", 0.1);
                 lassuKiirás("\n\tEzért a küldetésed majd tovább folytatódik!", 0.1);
