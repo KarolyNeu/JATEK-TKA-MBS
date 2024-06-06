@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\DungeonRush\\DungeonRush\\DungeonRush\\DungeonRush.csproj": {}
+    "C:\\Users\\Suli\\Desktop\\Jatek\\JATEK-TKA-MBS\\DungeonRush\\DungeonRush\\DungeonRush\\DungeonRush.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\DungeonRush\\DungeonRush\\DungeonRush\\DungeonRush.csproj": {
+    "C:\\Users\\Suli\\Desktop\\Jatek\\JATEK-TKA-MBS\\DungeonRush\\DungeonRush\\DungeonRush\\DungeonRush.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\DungeonRush\\DungeonRush\\DungeonRush\\DungeonRush.csproj",
+        "projectUniqueName": "C:\\Users\\Suli\\Desktop\\Jatek\\JATEK-TKA-MBS\\DungeonRush\\DungeonRush\\DungeonRush\\DungeonRush.csproj",
         "projectName": "DungeonRush",
-        "projectPath": "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\DungeonRush\\DungeonRush\\DungeonRush\\DungeonRush.csproj",
-        "packagesPath": "C:\\Users\\Karesz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Karesz\\Desktop\\Jatekterv\\JATEK-TKA-MBS\\DungeonRush\\DungeonRush\\DungeonRush\\obj\\",
+        "projectPath": "C:\\Users\\Suli\\Desktop\\Jatek\\JATEK-TKA-MBS\\DungeonRush\\DungeonRush\\DungeonRush\\DungeonRush.csproj",
+        "packagesPath": "C:\\Users\\Suli\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Suli\\Desktop\\Jatek\\JATEK-TKA-MBS\\DungeonRush\\DungeonRush\\DungeonRush\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Karesz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Suli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

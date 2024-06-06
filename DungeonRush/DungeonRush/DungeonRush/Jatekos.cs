@@ -11,6 +11,7 @@ namespace DungeonRush
         public string Nev;
         public int Ero { get; set; } = 3;
         public int Elet { get; set; } = 10;
+        public int Penz { get; set; } = 0;
         //public int Level { get; set; } = 1;
         //public int XP { get; set; }
         //public int XPKoviszint { get; set; } = 10;

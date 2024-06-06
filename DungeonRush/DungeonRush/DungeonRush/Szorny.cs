@@ -8,8 +8,17 @@ namespace DungeonRush
 {
     class Szorny
     {
-        public string Nev = "Ryuk";
-        public int Ero { get; set; } = 1;
-        public int Elet { get; set; } = 25;
+        public Szorny(string Nev, string Rajz, int Ero, int Elet) { 
+
+            this.Nev = Nev;
+            this.Rajz = Rajz;
+            this.Ero = Ero;
+            this.Elet = Elet;
     }
+        public string Nev;
+        public string Rajz;
+        public int Ero { get; set; }
+        public int Elet { get; set; }
+
+}
 }
