@@ -8,6 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="BossFight.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="BossFight.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="firstmap.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

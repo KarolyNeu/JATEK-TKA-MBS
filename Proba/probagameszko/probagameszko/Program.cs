@@ -1,90 +1,62 @@
-﻿using System;
+﻿class Leny {
+    public string Nev { get; set; }
+    public int Eletero { get; set; }
+    public int Tamadas { get; set; }
+    public int Vedekezes { get; set; }
 
-class Cube
-{
-    public int position; // A kocka pozíciója (1-től 9-ig)
-
-    public Cube()
-    {
-        position = 6; // Kezdeti pozíció
+    public Leny(string nev, int eletero, int tamadas, int vedekezes) {
+        Nev = nev;
+        Eletero = eletero;
+        Tamadas = tamadas;
+        Vedekezes = vedekezes;
     }
 
-    public void Move(char key)
-    {
-
-        switch (key)
-        {
-            case 'w':
-                position -= 4;
-                break;
-            case 's':
-                position += 4;
-                break;
-            case 'd':
-                position++;
-                break;
-            case 'a':
-                position--;
-                break;
-            default:
-                throw new ArgumentException("Használd a rendes billentyűket!: " + key);
-        }
-
-        if (position < 1 || position > 16)
-        {
-            position = 2;
-            throw new ArgumentException("Kimentél a pályáról!");
-
-
+    public void Tamad(Leny celpont) {
+        int sebesites = Tamadas - celpont.Vedekezes;
+        if (sebesites > 0) {
+            celpont.Eletero -= sebesites;
+            Console.WriteLine($"{Nev} megtámadta {celpont.Nev}-et, és {sebesites} sebzést okozott.");
+        } else {
+            Console.WriteLine($"{Nev} támadása nem okozott sebzést {celpont.Nev}-nek.");
         }
     }
 
-    public void PrintMatrix()
-    {
-        for (int i = 1; i <= 4; i++)
-        {
-            for (int j = 1; j <= 4; j++)
-            {
-                int cellPosition = (i - 1) * 4 + j;
-                if (cellPosition == position)
-                {
-                    Console.Write("[X]");
-                }
-                else
-                {
-                    Console.Write("[ ]");
-                }
-            }
-            Console.WriteLine();
-        }
+    public void Gyogyit() {
+        // ... gyógyítási logika
     }
 }
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        Cube cube = new Cube();
+class Csatater {
+    public List<Leny> Jatekosok { get; set; }
+    public List<Leny> Ellensegek { get; set; }
 
-        while (true)
-        {
+    public Csatater(List<Leny> jatekosok, List<Leny> ellensegek) {
+        Jatekosok = jatekosok;
+        Ellensegek = ellensegek;
+    }
 
-            Console.Write(" Nyomj meg egy billentyűt (w, s, d, a): ");
-            char key = Console.ReadKey().KeyChar;
-            Console.WriteLine();
-            Console.Clear();
-            try
-            {
-                cube.Move(key);
-            }
-            catch (ArgumentException e)
-            {
-                Console.WriteLine(e.Message);
-                continue;
-            }
+    public void KezddElACsatat() {
+        while (Jatekosok.Count > 0 && Ellensegek.Count > 0) {
+            JatekosKoreo();
+            EllensegKoreo();
+        }
 
-            cube.PrintMatrix();
+        if (Jatekosok.Count > 0) {
+            Console.WriteLine("A játékosok győztek!");
+        } else {
+            Console.WriteLine("Az ellenségek győztek!");
+        }
+    }
 
+    private void JatekosKoreo() {
+        foreach (Leny jatekos in Jatekosok) {
+            // ... játékos cselekvési logika
+        }
+    }
+
+    private void EllensegKoreo() {
+        foreach (Leny ellenseg in Ellensegek) {
+            // ... ellenség cselekvési logika
         }
     }
 }

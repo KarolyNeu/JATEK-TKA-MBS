@@ -9,6 +9,10 @@ namespace DungeonRush
     class Program
     {
         public static Jatekos jelenlegiJatekos = new Jatekos();
+        public static Szorny Szorny = new Szorny();
+
+        public static int Elet { get; private set; }
+
         static void Main(string[] args)
 
         {
@@ -19,6 +23,8 @@ namespace DungeonRush
             KettoHarom();
             JatekHarmadik();
             HaromNegy();
+            Vegso();
+            Vege();
         }
         static void lassuKiirás(string szöveg, double szünetMásodperc)
         {
@@ -46,11 +52,11 @@ namespace DungeonRush
             bool jatekvege = true;
             // Mátrix definiálása
             int[,] palyaegy = new int[,] {
-{ 1,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,1,0,0,0,1 },
-{ 1,4,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,1 },
-{ 1,2,2,2,2,2,2,0,0,0,1,0,0,0,2,2,2,2,2,2,1,0,0,0,1 },
-{ 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1 },
-{ 1,0,0,0,1,2,2,2,2,0,0,0,2,2,2,2,1,0,0,0,1,0,0,0,1 },
+{ 1,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,1,2,2,2,1 },
+{ 1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,4 },
+{ 1,2,2,2,2,2,2,0,0,0,1,0,0,0,2,2,2,2,2,2,1,0,0,0,4 },
+{ 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,4 },
+{ 1,0,0,0,1,2,2,2,2,0,0,0,2,2,2,2,1,0,0,0,1,2,2,2,1 },
 { 1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1 },
 { 1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1 },
 { 1,2,2,2,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,1 }
@@ -350,6 +356,60 @@ namespace DungeonRush
             Console.ReadKey();
             Console.Clear();
         }
+        static void Vegso()
+        {
+            bool jatekvege = true;
+            lassuKiirás($"\n\tA szörny életereje: {Szorny.Elet} és neve: {Szorny.Nev}!", 0.1);
+            while (jatekvege)
+            {
+                Console.WriteLine($"A szörny életereje: {Szorny.Elet}");
+                Console.WriteLine();
+                Console.WriteLine($"=====================");
+                Console.WriteLine($"| (A)ttack (D)efend |");
+                Console.WriteLine($"| (R)un    (H)eal   |");
+                Console.WriteLine($"=====================");
+                Console.WriteLine();
+                Console.Write("Nyomj meg egy billentyűt (a,d,r, h): ");
+                Console.WriteLine();
+                char megadas = Console.ReadKey().KeyChar;
+
+                if (megadas == 'a')
+                {
+                    Random random = new Random();
+                    int tamadas = random.Next(1,4);
+                    Szorny.Elet = Szorny.Elet - tamadas;
+                    if (tamadas > 2)
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine(" Kritikus csapás!");
+                    }
+                
+                }
+                if (Szorny.Elet < 0)
+                {
+                    jatekvege = false;
+                }
+            }
+
+
+
+        }
+        static void Vege()
+        {
+            Console.WriteLine();
+            lassuKiirás($"\tGratulálok {jelenlegiJatekos.Nev} a küldetésed sikeres volt!", 0.2);
+            Console.Clear();
+            lassuKiirás($"\n\tViszont egy olyan információ jár körül a legközelebbi faluban ,hogy egy démon uralkodik ott.", 0.1);
+            lassuKiirás("\n\tEzért a küldetésed majd tovább folytatódik!", 0.1);
+            Console.Clear();
+            lassuKiirás("\n\tNyomj meg egy billentyűt", 0.2);
+            Console.ReadKey();
+            Console.Clear();
+            lassuKiirás($"\n\tA játékot készítették: \n\tTóth Károly Attila,\n\tMeng Balázs Sándor", 0.2);
+            lassuKiirás($"\n\tDungeon Rush The VideoGame", 0.2);
+            lassuKiirás($"\n\tVége", 0.2);
+        }
+
     }
 
 }
