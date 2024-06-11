@@ -9,8 +9,8 @@ namespace DungeonRush
     class Jatekos
     {
         public string Nev;
-        public int Ero { get; set; } = 4;
-        public int Elet { get; set; } = 10;
+        public int Ero { get; set; } = 5;
+        public int Elet { get; set; } = 15;
         public int Penz { get; set; } = 0;
         //public int Level { get; set; } = 1;
         //public int XP { get; set; }
